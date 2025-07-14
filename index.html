@@ -1,34 +1,86 @@
-<!DOCTYPE html><html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Malla Interactiva</title>
+  <title>Malla Interactiva - Finanzas y Negocios Internacionales</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>ᴹᵃᵏʰᵏ ᴇᴜᵐᵉᵗᵃᵗʰ: Malla Interactiva</h1>
+  <h1>Malla Interactiva - Finanzas y Negocios Internacionales</h1>
   <div class="grid">
-    <!-- Semestre 1 -->
+    <!-- Semestres -->
     <div class="semestre">
       <h2>Semestre I</h2>
-      <button class="materia" data-id="eco">Fundamentos de Economía</button>
-      <button class="materia" data-id="adm">Fundamentos de la Administración</button>
-      <button class="materia" data-id="mate">Matemática Fundamental</button>
+      <button onclick="aprobar(this, ['prob', 'micro'])">Fundamentos de Contabilidad</button>
+      <button onclick="aprobar(this, ['macro'])">Fundamentos de Administración</button>
+      <button onclick="aprobar(this, ['calculo'])">Matemática Fundamental</button>
+      <button onclick="aprobar(this, ['micro'])">Fundamentos de Economía</button>
+      <button onclick="aprobar(this, [])">Fundamentos de Mercadeo</button>
+      <button onclick="aprobar(this, [])">Intro a los Negocios Internacionales</button>
     </div>
-    <!-- Semestre 2 -->
     <div class="semestre">
       <h2>Semestre II</h2>
-      <button class="materia" data-id="micro" data-depends="eco">Microeconomía</button>
-      <button class="materia" data-id="calc1" data-depends="mate">Cálculo I</button>
+      <button id="prob" disabled>Probabilidad y Estadística</button>
+      <button id="micro" disabled>Microeconomía</button>
+      <button id="calculo" disabled>Cálculo I</button>
+      <button onclick="aprobar(this, [])">Acuerdos Comerciales</button>
+      <button onclick="aprobar(this, ['finanzas'])">Intro a las Finanzas</button>
     </div>
-    <!-- Semestre 3 -->
     <div class="semestre">
       <h2>Semestre III</h2>
-      <button class="materia" data-id="macro" data-depends="micro">Macroeconomía</button>
-      <button class="materia" data-id="matfin" data-depends="calc1">Matemática Financiera</button>
+      <button id="macro" disabled>Macroeconomía</button>
+      <button onclick="aprobar(this, [])">Estadística Aplicada</button>
+      <button onclick="aprobar(this, ['inv'])">Matemática Financiera</button>
+      <button onclick="aprobar(this, [])">Logística Internacional</button>
+      <button onclick="aprobar(this, [])">Inglés I</button>
+    </div>
+    <div class="semestre">
+      <h2>Semestre IV</h2>
+      <button id="finanzas" disabled>Fundamentos de Finanzas</button>
+      <button onclick="aprobar(this, [])">Costos y Presupuestos</button>
+      <button onclick="aprobar(this, ['inv'])">Finanzas Corporativas</button>
+      <button onclick="aprobar(this, [])">Comercio Exterior</button>
+      <button onclick="aprobar(this, [])">Inglés II</button>
+    </div>
+    <div class="semestre">
+      <h2>Semestre V</h2>
+      <button id="inv" disabled>Gestión de Inversiones</button>
+      <button onclick="aprobar(this, [])">Régimen Cambiario</button>
+      <button onclick="aprobar(this, [])">Finanzas Internacionales</button>
+      <button onclick="aprobar(this, [])">Derecho Comercial</button>
+      <button onclick="aprobar(this, [])">Inglés III</button>
+    </div>
+    <div class="semestre">
+      <h2>Semestre VI</h2>
+      <button onclick="aprobar(this, [])">Gestión del Riesgo</button>
+      <button onclick="aprobar(this, [])">Planeación Financiera</button>
+      <button onclick="aprobar(this, [])">Negociación Internacional</button>
+      <button onclick="aprobar(this, [])">Ética Empresarial</button>
+      <button onclick="aprobar(this, [])">Inglés IV</button>
+    </div>
+    <div class="semestre">
+      <h2>Semestre VII</h2>
+      <button onclick="aprobar(this, [])">Evaluación de Proyectos</button>
+      <button onclick="aprobar(this, [])">Estrategias de Internacionalización</button>
+      <button onclick="aprobar(this, [])">Responsabilidad Social</button>
+      <button onclick="aprobar(this, [])">Electiva Profesional I</button>
+      <button onclick="aprobar(this, [])">Electiva en Humanidades</button>
+    </div>
+    <div class="semestre">
+      <h2>Semestre VIII</h2>
+      <button onclick="aprobar(this, [])">Finanzas Públicas</button>
+      <button onclick="aprobar(this, [])">Electiva Profesional II</button>
+      <button onclick="aprobar(this, [])">Seminario de Investigación</button>
+      <button onclick="aprobar(this, [])">Electiva Libre</button>
+      <button onclick="aprobar(this, [])">Inglés V</button>
+    </div>
+    <div class="semestre">
+      <h2>Semestre IX</h2>
+      <button onclick="aprobar(this, [])">Práctica Profesional</button>
+      <button onclick="aprobar(this, [])">Trabajo de Grado</button>
     </div>
   </div>
   <script src="script.js"></script>
 </body>
-        </html>
+  </html>
