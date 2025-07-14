@@ -9,78 +9,94 @@
 <body>
   <h1>Malla Interactiva - Finanzas y Negocios Internacionales</h1>
   <div class="grid">
-    <!-- Semestres -->
+    <!-- Semestre I -->
     <div class="semestre">
       <h2>Semestre I</h2>
-      <button onclick="aprobar(this, ['prob', 'micro'])">Fundamentos de Contabilidad</button>
-      <button onclick="aprobar(this, ['macro'])">Fundamentos de Administración</button>
-      <button onclick="aprobar(this, ['calculo'])">Matemática Fundamental</button>
-      <button onclick="aprobar(this, ['micro'])">Fundamentos de Economía</button>
-      <button onclick="aprobar(this, [])">Fundamentos de Mercadeo</button>
-      <button onclick="aprobar(this, [])">Intro a los Negocios Internacionales</button>
+      <button class="materia" data-id="conta">Fundamentos de Contabilidad</button>
+      <button class="materia" data-id="admin">Fundamentos de Administración</button>
+      <button class="materia" data-id="mate">Matemática Fundamental</button>
+      <button class="materia" data-id="eco">Fundamentos de Economía</button>
+      <button class="materia" data-id="mercadeo">Fundamentos de Mercadeo</button>
+      <button class="materia" data-id="intro_negocios">Intro a los Negocios Internacionales</button>
     </div>
+
+    <!-- Semestre II -->
     <div class="semestre">
       <h2>Semestre II</h2>
-      <button id="prob" disabled>Probabilidad y Estadística</button>
-      <button id="micro" disabled>Microeconomía</button>
-      <button id="calculo" disabled>Cálculo I</button>
-      <button onclick="aprobar(this, [])">Acuerdos Comerciales</button>
-      <button onclick="aprobar(this, ['finanzas'])">Intro a las Finanzas</button>
+      <button class="materia" data-id="prob" data-depends="conta">Probabilidad y Estadística</button>
+      <button class="materia" data-id="micro" data-depends="eco">Microeconomía</button>
+      <button class="materia" data-id="calculo" data-depends="mate">Cálculo I</button>
+      <button class="materia" data-id="acuerdos">Acuerdos Comerciales</button>
+      <button class="materia" data-id="intro_fin" data-depends="conta">Introducción a las Finanzas</button>
     </div>
+
+    <!-- Semestre III -->
     <div class="semestre">
       <h2>Semestre III</h2>
-      <button id="macro" disabled>Macroeconomía</button>
-      <button onclick="aprobar(this, [])">Estadística Aplicada</button>
-      <button onclick="aprobar(this, ['inv'])">Matemática Financiera</button>
-      <button onclick="aprobar(this, [])">Logística Internacional</button>
-      <button onclick="aprobar(this, [])">Inglés I</button>
+      <button class="materia" data-id="macro" data-depends="micro,admin">Macroeconomía</button>
+      <button class="materia" data-id="estad_aplicada" data-depends="prob">Estadística Aplicada</button>
+      <button class="materia" data-id="mat_fin" data-depends="calculo,intro_fin">Matemática Financiera</button>
+      <button class="materia" data-id="logistica">Logística Internacional</button>
+      <button class="materia" data-id="ingles1">Inglés I</button>
     </div>
+
+    <!-- Semestre IV -->
     <div class="semestre">
       <h2>Semestre IV</h2>
-      <button id="finanzas" disabled>Fundamentos de Finanzas</button>
-      <button onclick="aprobar(this, [])">Costos y Presupuestos</button>
-      <button onclick="aprobar(this, ['inv'])">Finanzas Corporativas</button>
-      <button onclick="aprobar(this, [])">Comercio Exterior</button>
-      <button onclick="aprobar(this, [])">Inglés II</button>
+      <button class="materia" data-id="finanzas" data-depends="intro_fin">Fundamentos de Finanzas</button>
+      <button class="materia" data-id="costos" data-depends="conta">Costos y Presupuestos</button>
+      <button class="materia" data-id="fin_corp" data-depends="finanzas">Finanzas Corporativas</button>
+      <button class="materia" data-id="comercio_ext">Comercio Exterior</button>
+      <button class="materia" data-id="ingles2" data-depends="ingles1">Inglés II</button>
     </div>
+
+    <!-- Semestre V -->
     <div class="semestre">
       <h2>Semestre V</h2>
-      <button id="inv" disabled>Gestión de Inversiones</button>
-      <button onclick="aprobar(this, [])">Régimen Cambiario</button>
-      <button onclick="aprobar(this, [])">Finanzas Internacionales</button>
-      <button onclick="aprobar(this, [])">Derecho Comercial</button>
-      <button onclick="aprobar(this, [])">Inglés III</button>
+      <button class="materia" data-id="inv" data-depends="mat_fin,fin_corp">Gestión de Inversiones</button>
+      <button class="materia" data-id="cambiario">Régimen Cambiario</button>
+      <button class="materia" data-id="fin_int" data-depends="finanzas">Finanzas Internacionales</button>
+      <button class="materia" data-id="comercial">Derecho Comercial</button>
+      <button class="materia" data-id="ingles3" data-depends="ingles2">Inglés III</button>
     </div>
+
+    <!-- Semestre VI -->
     <div class="semestre">
       <h2>Semestre VI</h2>
-      <button onclick="aprobar(this, [])">Gestión del Riesgo</button>
-      <button onclick="aprobar(this, [])">Planeación Financiera</button>
-      <button onclick="aprobar(this, [])">Negociación Internacional</button>
-      <button onclick="aprobar(this, [])">Ética Empresarial</button>
-      <button onclick="aprobar(this, [])">Inglés IV</button>
+      <button class="materia" data-id="riesgo" data-depends="finanzas">Gestión del Riesgo</button>
+      <button class="materia" data-id="planeacion">Planeación Financiera</button>
+      <button class="materia" data-id="negociacion">Negociación Internacional</button>
+      <button class="materia" data-id="etica">Ética Empresarial</button>
+      <button class="materia" data-id="ingles4" data-depends="ingles3">Inglés IV</button>
     </div>
+
+    <!-- Semestre VII -->
     <div class="semestre">
       <h2>Semestre VII</h2>
-      <button onclick="aprobar(this, [])">Evaluación de Proyectos</button>
-      <button onclick="aprobar(this, [])">Estrategias de Internacionalización</button>
-      <button onclick="aprobar(this, [])">Responsabilidad Social</button>
-      <button onclick="aprobar(this, [])">Electiva Profesional I</button>
-      <button onclick="aprobar(this, [])">Electiva en Humanidades</button>
+      <button class="materia" data-id="proyectos" data-depends="planeacion">Evaluación de Proyectos</button>
+      <button class="materia" data-id="internacionalizacion" data-depends="comercio_ext">Estrategias de Internacionalización</button>
+      <button class="materia" data-id="rse">Responsabilidad Social</button>
+      <button class="materia" data-id="electiva1">Electiva Profesional I</button>
+      <button class="materia" data-id="humanidades">Electiva en Humanidades</button>
     </div>
+
+    <!-- Semestre VIII -->
     <div class="semestre">
       <h2>Semestre VIII</h2>
-      <button onclick="aprobar(this, [])">Finanzas Públicas</button>
-      <button onclick="aprobar(this, [])">Electiva Profesional II</button>
-      <button onclick="aprobar(this, [])">Seminario de Investigación</button>
-      <button onclick="aprobar(this, [])">Electiva Libre</button>
-      <button onclick="aprobar(this, [])">Inglés V</button>
+      <button class="materia" data-id="fin_pub">Finanzas Públicas</button>
+      <button class="materia" data-id="electiva2">Electiva Profesional II</button>
+      <button class="materia" data-id="investigacion">Seminario de Investigación</button>
+      <button class="materia" data-id="libre">Electiva Libre</button>
+      <button class="materia" data-id="ingles5" data-depends="ingles4">Inglés V</button>
     </div>
+
+    <!-- Semestre IX -->
     <div class="semestre">
       <h2>Semestre IX</h2>
-      <button onclick="aprobar(this, [])">Práctica Profesional</button>
-      <button onclick="aprobar(this, [])">Trabajo de Grado</button>
+      <button class="materia" data-id="practica" data-depends="electiva2">Práctica Profesional</button>
+      <button class="materia" data-id="trabajo_grado" data-depends="investigacion">Trabajo de Grado</button>
     </div>
   </div>
   <script src="script.js"></script>
 </body>
-  </html>
+</html>
