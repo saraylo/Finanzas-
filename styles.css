@@ -50,7 +50,7 @@ button:disabled {
   cursor: not-allowed;
 }
 
-button.aprobado {
+button.aprobada {
   background-color: transparent;
   color: #4b0049;
   border: none;
